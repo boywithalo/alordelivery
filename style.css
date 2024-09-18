@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face { font-family: Agrandir; src: url('fonts/PPAgrandir-Regular.otf'); } 
+@font-face { font-family: AgrandirNL; src: url('fonts/PPAgrandir-li.otf'); font-family: Garet; src: url('fonts/Garet-Book.ttf'); } 
+/* #1c2120 */
+body{
+    margin:0;
+    background-color: #F5F7F8;
+    
+}
+*{
+    font-family: "Agrandir", sans-serif;
+    
+}
+.header{
+    background-color: #E1F0DA;
+    margin:2%;
+    padding:4%;
+    border-radius: 15px;
+    width:88%;
+    height: 60px;
+    position: fixed;
+    filter: invert();
+    
+}
+
+header>img{
+    width: 60%;
+    
+}
+.menu{
+    width: 10%;
+    float: right;
+    margin-top: 3%;
+    margin-right: 10px;
+}
+.welcomepage{
+    background-image: url('img/Freebie-GradientTextures-01.jpg');
+    background-size: 200%;
+    background-repeat: no-repeat;
+}
+.dr{
+    padding-top: 110%;
+    
+}
+.delivery{
+    /* font-family: 'Poppins', sans-serif; */
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 290%;
+    text-align: center;
+    margin: 0;
+}
+.Reimagined{
+    font-family: "Garet";
+    font-weight: 900;
+    text-align: center;
+    font-size: 300%;
+    margin: 0;
+    
+background: linear-gradient(122.3deg, rgb(111, 71, 133) 14.6%, rgb(232, 129, 166) 29.6%, rgb(237, 237, 183) 42.1%, rgb(244, 166, 215) 56.7%, rgb(154, 219, 232) 68.7%, rgb(238, 226, 159) 84.8%);; 
+-webkit-text-fill-color: transparent; 
+-webkit-background-clip: text;
+
+    
+}
+.startbtn{
+    text-decoration: none;
+    color:black;
+    font-size: 5vw;
+    font-weight: 600;
+    letter-spacing: 1px;
+    /* font-family: 'Poppins', sans-serif; */
+    background: linear-gradient(122.3deg, rgb(111, 71, 133) 14.6%, rgb(232, 129, 166) 29.6%, rgb(237, 237, 183) 42.1%, rgb(244, 166, 215) 56.7%, rgb(154, 219, 232) 68.7%, rgb(238, 226, 159) 84.8%);; 
+    padding:12.5px 20px;
+    border-radius: 100px;
+    transition: .3s;
+}
+.startbtn:hover{
+    transition: .3s;
+    border-radius: 20px;
+}
+.startbtn:active{
+    transition: .3s;
+    border-radius: 20px;
+}
+.centered{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
