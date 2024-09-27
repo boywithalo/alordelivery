@@ -23,3 +23,9 @@ window.addEventListener('load', function() {
         
     }, 2000); // 2-second delay before starting the fade-out
 });
+
+
+function start(){
+    let startdiv = document.querySelector('.dr')
+    startdiv.classList.add('.floatup')
+}
