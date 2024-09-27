@@ -29,3 +29,20 @@ function start(){
     let startdiv = document.querySelector('.dr')
     startdiv.classList.add('.floatup')
 }
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const searchInput = document.querySelector('.search-input');
+    const dr2 = document.querySelector('.dr2');
+
+    // Add 'active-padding' class when input is focused
+    searchInput.addEventListener('focus', function() {
+        dr2.classList.add('active-padding');
+    });
+
+    // Remove 'active-padding' class when input loses focus
+    searchInput.addEventListener('blur', function() {
+        dr2.classList.remove('active-padding');
+    });
+});
