@@ -7,6 +7,10 @@ body{
     background-color: #F5F7F8;
     
 }
+
+:root{
+    --height: 86vh
+} 
 *{
     font-family: "Agrandir", sans-serif;
     
@@ -17,6 +21,7 @@ body{
     padding:4%;
     border-radius: 15px;
     width:88%;
+    min-height: 60px;
     height: 60px;
     position: fixed;
     filter: invert();
@@ -44,6 +49,9 @@ header>img{
 .dr{
     padding-top: 48vh;
     
+}
+.dr2{
+    padding-top:44vh;
 }
 .delivery{
     /* font-family: 'Poppins', sans-serif; */
@@ -77,6 +85,7 @@ background: linear-gradient(122.3deg, rgb(111, 71, 133) 14.6%, rgb(232, 129, 166
     padding:12.5px 20px;
     border-radius: 100px;
     transition: .3s;
+    border: 0;
 }
 .startbtn:hover{
     transition: .3s;
@@ -133,9 +142,10 @@ background: linear-gradient(122.3deg, rgb(111, 71, 133) 14.6%, rgb(232, 129, 166
     padding-top: 25vh;
     
 }
-@media (orientation:landscape){
+@media (orientation: landscape) or (min-width: 505px) {
     .welcomepage{
         background-image: url('img/14834838_5528913.jpg');
+        background-size: cover;
     }
     .uhoh{
         display: block;
@@ -174,6 +184,7 @@ background: linear-gradient(122.3deg, rgb(111, 71, 133) 14.6%, rgb(232, 129, 166
 }
 #preloader img {
     width: 30%; /* Adjust the size of the image */
+    max-width:200px;
     height: auto;
     animation: pulse 1.5s infinite; /* Pulses every second, infinitely */
 }
@@ -183,3 +194,140 @@ background: linear-gradient(122.3deg, rgb(111, 71, 133) 14.6%, rgb(232, 129, 166
     50% { transform: scale(1.2); } /* Slightly increase the size */
     100% { transform: scale(1); }
 }
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Glass effect around the input */
+.dr2>form{
+    display: flex;
+    justify-content: center;
+}
+.glass-border {
+    position: relative;
+    padding: 10px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    /* backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); */
+    width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+/* Input inside the glass border */
+.search-input {
+    
+    width: 93%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background: white;
+    font-size: 20px;
+    outline: none;
+    padding-left: 40px;
+    letter-spacing:.5px;
+    
+}
+
+/* Clear button styling */
+.clear-button {
+    position: absolute;
+    right: 10px;
+    top: 55%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    /* color: white; */
+    font-size: 18px;
+    background-color: #aaaaaa00;
+    /* border-radius: 100px; */
+    border: none;
+    outline: none;
+    display: none;
+    
+}
+.clear-button>*{
+    background-color: #ffffff00;
+    color: #aaa;
+    color:000;
+    width:25px;
+    
+}
+/* Search icon styling */
+.search-icon {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    position: absolute;
+    left: 15px;
+    padding: 4px;
+}
+
+/* Placeholder styling */
+.search-input::placeholder {
+    color: #aaa;
+}
+
+
+
+/* Show the clear button when input is not empty */
+.glass-border.has-text .clear-button {
+    display: block;
+}
+
+button {
+    cursor: pointer;
+}
+
+.redd::-webkit-input-placeholder {
+    color: #ff2121
+ }
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+.floatup{
+    animation: floatup .5s cubic-bezier(.64,0,.4,1) forwards;
+}
+
+@keyframes floatup {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px); /* Move up by 100px */
+        opacity: 0; /* Fade out */
+    }
+}
+
+@keyframes floatdown {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100px); /* Move up by 100px */
+        opacity: 0; /* Fade out */
+    }
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.trackingmenu{
+    
+    background-color: #1e0f25;
+    height: var(--height);
+    width:95%;
+    margin-top: 25px;
+    background: rgba(255,255,255,0.4);
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+    border-radius: 15px;
+    
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
