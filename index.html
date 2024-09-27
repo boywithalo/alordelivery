@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="HckpB3m2KT9Eer8ahOoO0FB0-TUMnBGAJ_DuvH6UN68" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AlorDelivery</title>
@@ -24,9 +23,59 @@
     <main>
         <div class="dr">
             <h1 class="delivery">Delivery</h1><h1 class="Reimagined">Reimagined.</h1>
-            <div class="centered"> <a href="index.html" class="startbtn">Start</a></div>
+            <div class="centered"> <a href="track.html" class="startbtn">Start</a></div>
         </div>
+
+
+        
     </main>
+
+
+
     <script src="script.js"></script>
+    <script>
+        // Get the input and clear button elements
+        const searchInput = document.getElementById('trackingInput');
+        const clearButton = document.getElementById('clearButton');
+        const glassBorder = document.querySelector('.glass-border');
+
+        // Function to show or hide the clear button based on input value
+        searchInput.addEventListener('input', function() {
+            if (searchInput.value.length > 0) {
+                glassBorder.classList.add('has-text');
+            } else {
+                glassBorder.classList.remove('has-text');
+            }
+        });
+
+        // Clear the input field when the clear button is clicked
+        clearButton.addEventListener('click', function() {
+            searchInput.value = '';
+            glassBorder.classList.remove('has-text'); // Hide the clear button
+            searchInput.focus(); // Return focus to the input
+        });
+
+        // Redirect to tracking URL on form submission
+        function redirectToTracking() {
+            var trackingInfo = searchInput.value;
+
+            // Check if the input contains only numbers
+            var isNumeric = /^\d+$/.test(trackingInfo);
+
+            // If non-numeric characters are entered
+            if (!isNumeric) {
+                searchInput.value = ''; // Clear the input field
+                searchInput.placeholder = 'Numbers only'; // Change the placeholder to "Numbers only"
+                searchInput.classList.add('redd');
+                return false; // Prevent form submission
+            }
+
+            // Redirect to the tracking URL if input is valid
+            var trackingUrl = "https://boywithalo.github.io/alordelivery/tracking/" + trackingInfo;
+            window.location.href = trackingUrl;
+
+            return false; // Prevent default form submission
+        }
+    </script>
 </body>
 </html>
