@@ -52,6 +52,11 @@ header>img{
 }
 .dr2{
     padding-top:44vh;
+    transition: .3s cubic-bezier(.64,0,.4,1);
+}
+.dr2.active-padding {
+    padding-top: 15vh;
+    transition: .3s cubic-bezier(.64,0,.4,1);
 }
 .delivery{
     /* font-family: 'Poppins', sans-serif; */
@@ -226,6 +231,9 @@ background: linear-gradient(122.3deg, rgb(111, 71, 133) 14.6%, rgb(232, 129, 166
     padding-left: 40px;
     letter-spacing:.5px;
     
+}
+.search-input:active{
+
 }
 
 /* Clear button styling */
