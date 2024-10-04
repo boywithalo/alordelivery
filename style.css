@@ -9,7 +9,7 @@ body{
 }
 
 :root{
-    --height: 86vh
+    --height: 100%
 } 
 *{
     font-family: "Agrandir", sans-serif;
@@ -26,6 +26,7 @@ body{
     position: fixed;
     filter: invert();
     transition: .3s height;
+    z-index: 100;
 
 }
 .header.opened{
@@ -42,9 +43,11 @@ header>img{
     margin-right: 10px;
 }
 .welcomepage{
+    /* background-image: url('img/Freebie-GradientTextures-01.jpg'); */
     background-image: url('img/Freebie-GradientTextures-01.jpg');
-    background-size: 200%;
+    
     background-repeat: no-repeat;
+    background-size:170%;
 }
 .dr{
     padding-top: 48vh;
@@ -72,11 +75,15 @@ header>img{
     text-align: center;
     font-size: 300%;
     margin: 0;
-    
+/*     
 background: linear-gradient(122.3deg, rgb(111, 71, 133) 14.6%, rgb(232, 129, 166) 29.6%, rgb(237, 237, 183) 42.1%, rgb(244, 166, 215) 56.7%, rgb(154, 219, 232) 68.7%, rgb(238, 226, 159) 84.8%);; 
 -webkit-text-fill-color: transparent; 
--webkit-background-clip: text; 
+-webkit-background-clip: text;  */
 
+background: rgb(117,110,248);
+background: linear-gradient(53deg, rgba(117,110,248,1) 0%, rgba(153,203,255,1) 25%, rgba(237,221,255,1) 50%, rgba(184,196,254,1) 70%, rgba(161,169,252,1) 100%);
+-webkit-text-fill-color: transparent; 
+-webkit-background-clip: text; 
     
 }
 .startbtn{
@@ -149,8 +156,8 @@ background: linear-gradient(122.3deg, rgb(111, 71, 133) 14.6%, rgb(232, 129, 166
 }
 @media (orientation: landscape) or (min-width: 505px) {
     .welcomepage{
-        background-image: url('img/14834838_5528913.jpg');
-        background-size: cover;
+        background-image: url('img/Freebie-GradientTextures-01.jpg');
+        background-size: 170%;
     }
     .uhoh{
         display: block;
@@ -329,13 +336,78 @@ button {
     width:95%;
     margin-top: 25px;
     background: rgba(255,255,255,0.4);
-    -webkit-backdrop-filter: blur(25px);
-    backdrop-filter: blur(25px);
+    /* -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px); */
     border-radius: 15px;
     
 }
 
 
+.ordernum{
+    padding-top: 20px;
+    font-size: 7vw;
+    margin: 0;
+    margin-bottom:5px;
+    margin-left:15px
+}
+.blockwhite{
+    background-color: white;
+    margin:0px 5px;
+    margin-top: 5px;
+    border-radius: 15px;
+    padding: 18px 0px;
+    
+}
+.blockwhite>img{
+    width: 98%;
+    margin:0px 1%
+}
+
+.bigstatus{
+    
+    font-size: 9vw;
+    margin:0px 0px 5px 15px;
+    
+}
+.Estimated{
+    font-size: 5vw;
+    margin:0px 0px 0px 15px;
+
+}
+
+.trimg{
+    width:98%;
+    margin:0px 1%;
+    margin-top:10px
+}
+.divider{
+    height:5px;
+    border-radius: 100px;
+    width: 92%;
+    margin: 0px 4%;
+    background-color: #000;
+}
+.shdetails{
+    font-size:6vw;
+    
+    margin: 10px 0px 0px 0px;
+    margin-left: 15px;
+}
+.shippingdetails{
+    font-size: 4vw;
+    
+    margin: 5px 0px 10px 0px;
+    margin-left: 15px;
+
+}
+
+.alorad{
+    font-size: 8vw;
+}
+
+.alordelivery2{
+    color: rgba(117,110,248,1)
+}
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------*/
