@@ -6,7 +6,9 @@ menubutton.addEventListener('click', menutoggle);
 function menutoggle() {
     header.classList.toggle('opened');
 }
-
+function go(n){
+    window.location.href = n;
+}
 
 
 window.addEventListener('load', function() {
