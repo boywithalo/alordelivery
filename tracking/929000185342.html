@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Order Tracking</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <link rel="shortcut icon" href="../img/alorlogo.png" type="image/x-icon">
+
+</head>
+
+<body class="welcomepage">
+
+    <div id="preloader">
+
+        <img src="../img/alorlogo.png" alt="Loading..."  class="alorlogo"/>
+
+    </div>
+
+    <div class="mainremover"><div class="centered"><img src="../img/delivery2.png" alt="" class="uhohimg"></div>
+
+    <div class="uhhcentered"><h1 class="uhoh">Uh oh...<br>This page is not supported on your current device.
+
+    <br>Please switch to a different device to access the app.<br>This app currently only supports mobile phones. More compatibility coming soon.</h1></div>
+
+    <div class="centered"><a href="https://forms.gle/wPK7k99AiDtxYwtBA" class="btn phonec">You are on a phone? Click this!</a></div></div>
+
+
+    <header class="header"><img src="../img/delivery2.png" alt="" onclick="go('../index')"> <img src="../img/u.png" class="menu"></header><br><br><br><br>
+
+    <main>
+
+        <div class="centered"><div class="trackingmenu">
+            <h1 class="ordernum">#929000185342</h1>
+
+        <!-- change this -->
+
+        <h1 class="bigstatus">Outbound from China Customs,<br>can be delayed</h1>
+
+        <!-- change this -->
+
+        <p class="Estimated">Estimated delivery:<br>Dec 14/21, 11:00 PM</p>
+
+        <!-- change this 1=ordered 2=packaged 3=shipped 4=delivering 5=delivered-->
+
+        <img src="../trackingimg/3.png" class="trimg">
+
+        <!-- change this -->
+
+
+
+            
+
+        <div class="divider"></div>
+        <h1 class="shdetails">Shipping Details:</h1>
+        <p class="shippingdetails">SpeCode928bs277dh1<br>Novkhani<br>Azerbaijan<br> Leyla G.<br>Alor Delivery Air Global<br> <b>Code: 828452</b></p>
+        <div class="divider"></div>
+        <h1 class="shdetails">Shipment Details:</h1>
+        
+        <p class="shippingdetails">Tracking number: 929000185342<br>
+            Package ID:9900289<br>
+            Service: Alor Dellivery Global Air<br>
+            Weight:1.1Kg<br>
+            Via:AlorDelivery Global</p>
+            <div class="divider"></div>
+            <h1 class="shdetails">Package Photo<br>(Not available right now)</h1><br>
+            <!--<img src="../img/927514346042.jpg" style="width:93%; margin-left:3.5%; border-radius: 10px;">
+            <div class="divider"></div>
+            <h1 class="shdetails">Sign Photo (available when delivered)</h1><br>
+            <img src="../img/20241130_230240206.jpg" style="width:97%; margin-left:1.5%; border-radius: 10px;">
+       <h1 class="delivery alorad">Get more info about your shipments with</h1><h1 class="delivery alorad alordelivery2">AlorDelivery+</h1>
+        <div class="centered"> <a  class="startbtn" style="background-color: #aaa;" >Not available</a></div><br>-->
+    </div>
+    </div>
+    
+<br>
+
+
+
+        
+
+    </main>
+
+
+
+
+
+
+
+    <script src="../script.js"></script>
+
+    <script>
+
+        // Get the input and clear button elements
+
+        const searchInput = document.getElementById('trackingInput');
+
+        const clearButton = document.getElementById('clearButton');
+
+        const glassBorder = document.querySelector('.glass-border');
+
+
+
+        // Function to show or hide the clear button based on input value
+
+        searchInput.addEventListener('input', function() {
+
+            if (searchInput.value.length > 0) {
+
+                glassBorder.classList.add('has-text');
+
+            } else {
+
+                glassBorder.classList.remove('has-text');
+
+            }
+
+        });
+
+
+
+        // Clear the input field when the clear button is clicked
+
+        clearButton.addEventListener('click', function() {
+
+            searchInput.value = '';
+
+            glassBorder.classList.remove('has-text'); // Hide the clear button
+
+            searchInput.focus(); // Return focus to the input
+
+        });
+
+
+
+        // Redirect to tracking URL on form submission
+
+        function redirectToTracking() {
+
+            var trackingInfo = searchInput.value;
+
+
+
+            // Check if the input contains only numbers
+
+            var isNumeric = /^\d+$/.test(trackingInfo);
+
+
+
+            // If non-numeric characters are entered
+
+            if (!isNumeric) {
+
+                searchInput.value = ''; // Clear the input field
+
+                searchInput.placeholder = 'Numbers only'; // Change the placeholder to "Numbers only"
+
+                searchInput.classList.add('redd');
+
+                return false; // Prevent form submission
+
+            }
+
+
+
+            // Redirect to the tracking URL if input is valid
+
+            var trackingUrl = "https://boywithalo.github.io/alordelivery/tracking/" + trackingInfo;
+
+            window.location.href = trackingUrl;
+
+
+
+            return false; // Prevent default form submission
+
+        }
+
+    </script>
+
+</body>
+
+</html>

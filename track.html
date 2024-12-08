@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlorDelivery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/alorlogo.png" type="image/x-icon">
+</head>
+<body class="welcomepage">
+    <!-- <div id="preloader">
+        <img src="img/alorlogo.png" alt="Loading..."  class="alorlogo"/>
+    </div> -->
+    
+    <div class="mainremover"><div class="centered"><img src="img/delivery2.png" alt="" class="uhohimg"></div>
+    <div class="uhhcentered"><h1 class="uhoh">Uh oh...<br>This page is not supported on your current device.
+    <br>Please switch to a different device to access the app.<br>This app currently only supports mobile phones. More compatibility coming soon.</h1></div>
+    <div class="centered"><a href="https://forms.gle/wPK7k99AiDtxYwtBA" class="btn phonec">You are on a phone? Click this!</a></div></div>
+
+
+
+    <header class="header"><img src="img/delivery2.png" alt=""> <img src="img/u.png" class="menu"></header><br><br><br><br>
+
+
+    <main>
+        <div class="dr2">
+            <h1 class="delivery">Delivery</h1><h1 class="Reimagined">Reimagined.</h1><br>
+            <form id="trackingForm" onsubmit="return redirectToTracking()">
+                <div class="glass-border">
+                    <!-- Search Icon SVG -->
+                    <svg class="search-icon" viewBox="0 0 24 24" onclick="redirectToTracking()" >
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 2C5.58 2 2 5.58 2 10s3.58 8 8 8c1.85 0 3.55-.63 4.9-1.7l4.38 4.38 1.42-1.42-4.38-4.38C17.37 13.55 18 11.85 18 10c0-4.42-3.58-8-8-8zm-6 8c0-3.31 2.69-6 6-6s6 2.69 6 6-2.69 6-6 6-6-2.69-6-6z" fill="000"/>
+                    </svg>
+        
+                    <input type="text" class="search-input" placeholder="Enter tracking number" id="trackingInput" maxlength="12" minlength="12">
+                    
+                    <!-- Set the button type to "button" to prevent form submission -->
+                    <button type="button" class="clear-button" id="clearButton" style="color: #aaa;"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 30 30">
+                        <path fill="#aaa" d="M15,3C8.373,3,3,8.373,3,15c0,6.627,5.373,12,12,12s12-5.373,12-12C27,8.373,21.627,3,15,3z M16.414,15 c0,0,3.139,3.139,3.293,3.293c0.391,0.391,0.391,1.024,0,1.414c-0.391,0.391-1.024,0.391-1.414,0C18.139,19.554,15,16.414,15,16.414 s-3.139,3.139-3.293,3.293c-0.391,0.391-1.024,0.391-1.414,0c-0.391-0.391-0.391-1.024,0-1.414C10.446,18.139,13.586,15,13.586,15 s-3.139-3.139-3.293-3.293c-0.391-0.391-0.391-1.024,0-1.414c0.391-0.391,1.024-0.391,1.414,0C11.861,10.446,15,13.586,15,13.586 s3.139-3.139,3.293-3.293c0.391-0.391,1.024-0.391,1.414,0c0.391,0.391,0.391,1.024,0,1.414C19.554,11.861,16.414,15,16.414,15z"></path>
+                    </svg></button>
+                </div>
+                <!-- <button type="submit" style="margin-top: 10px;" class="startbtn">Track</button> -->
+            </form>
+        </div>
+
+
+        
+    </main>
+
+
+
+    <script src="script.js"></script>
+    <script>
+        // Get the input and clear button elements
+        const searchInput = document.getElementById('trackingInput');
+        const clearButton = document.getElementById('clearButton');
+        const glassBorder = document.querySelector('.glass-border');
+
+        // Function to show or hide the clear button based on input value
+        searchInput.addEventListener('input', function() {
+            if (searchInput.value.length > 0) {
+                glassBorder.classList.add('has-text');
+            } else {
+                glassBorder.classList.remove('has-text');
+            }
+        });
+
+        // Clear the input field when the clear button is clicked
+        clearButton.addEventListener('click', function() {
+            searchInput.value = '';
+            glassBorder.classList.remove('has-text'); // Hide the clear button
+            searchInput.focus(); // Return focus to the input
+        });
+
+        // Redirect to tracking URL on form submission
+        function redirectToTracking() {
+            var trackingInfo = searchInput.value;
+
+            // Check if the input contains only numbers
+            var isNumeric = /^\d+$/.test(trackingInfo);
+
+            // If non-numeric characters are entered
+            if (!isNumeric) {
+                searchInput.value = ''; // Clear the input field
+                searchInput.placeholder = 'Numbers only'; // Change the placeholder to "Numbers only"
+                searchInput.classList.add('redd');
+                return false; // Prevent form submission
+            }
+
+            // Redirect to the tracking URL if input is valid
+            var trackingUrl = "https://boywithalo.github.io/alordelivery/tracking/" + trackingInfo;
+            window.location.href = trackingUrl;
+
+            return false; // Prevent default form submission
+        }
+    </script>
+</body>
+</html>
